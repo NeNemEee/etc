@@ -1,4 +1,4 @@
-#ver.220315
+#ver.220316
 #배열을 넘겨주고 배열로 돌려받음
  
 int*mergeSort(int*_arr, int size){
