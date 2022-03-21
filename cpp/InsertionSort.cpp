@@ -45,7 +45,7 @@ int insertionSort(int*arr, int n, int p){
 		}
 	}
 	
-	return 0;
+	return arr;
 }
 int insertionSort(int*arr, int n){
 	int i=1;
