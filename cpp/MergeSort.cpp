@@ -45,6 +45,9 @@ int*mergeSort(int*_arr, int size){
 		k++;
 	}
 	
+	delete[] halfArr;
+	delete[] otherArr;
+	
 	return _arr;
 }
 

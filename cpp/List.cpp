@@ -12,31 +12,28 @@ class List{
 	public:
 		List(){
 			size = 0;
+			next = NULL;
 		}
-		List(T _tmp){
-			size = 1;
-			data = _tmp;
-		}
+
 		List(T _tmp, int _size){
-			size = _size;
 			data = _tmp;
+			size = _size;
+			next = NULL;
 		}
+		
 		~List(){
-			if(size!=0){
-				
+			if(next!=NULL){
+				delete next;
 			}
 		}
-		int push(T _tmp){
-			if(size==0){
-				data = _tmp;
-				size = 1;
-			}else{
-				
+		int push_back(T _tmp, int idx){
+			if(size!=idx-1){
 				size++;
-				List<T>* _next = new List<T>(_tmp, size);
-				next = _next;
+				push(_tmp, idx+1);
+			}else{
+				next = new List<T>(_tmp, idx+2);
+				size++;
 			}
-			
 			return 0;
 		}
 };
