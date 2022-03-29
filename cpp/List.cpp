@@ -162,12 +162,12 @@ class List{
 		T at(int idx){
 			if(size==0){
 				printf("don't!\n'");
-				return -1;
+				return 0;
 			}
 			
 			if(idx>=size){
 				printf("don't!\n'");
-				return -1;
+				return 0;
 			}
 			
 			Node<T>*tmp = head;
@@ -185,15 +185,14 @@ class List{
 };
 
 int main(){
-	List<int>*start = new List<int>();
+	List<string>*start = new List<string>();
 	
-	start->push_back(1);
-	start->push_back(2);
-	start->add(0,0);
-	start->add(3,1);
+	start->push_back("sdsd");
+	start->push_back("sdsdsd");
+	start->add("5555", 0);
+	start->add("9999", 1);
+	cout<<start->len()<<endl;
 	
-	start->pop_back();
-	start->remove(1);
 	
 	for(int i=0; i<start->len(); i++){
 		cout<<start->at(i)<<endl;
