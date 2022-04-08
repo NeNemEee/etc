@@ -19,10 +19,13 @@ void swap(int& tmp){
 	int&pp = tmp;
 	
 	pp=0;
+	cout<<tmp<<endl;
 	cout<<pp<<endl;
 }
 
 void swap2(int*tmp){
-	tmp++;
-	
+	cout<<tmp<<endl;
+	(*tmp)++;
+	cout<<tmp<<endl;
+	cout<<*tmp<<endl;
 }
